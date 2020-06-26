@@ -1,0 +1,27 @@
+{
+    "name": "saippuakauppias/test-cart",
+    "description": "",
+    "license": "MIT",
+    "keywords": [
+        "test",
+        "cart"
+    ],
+    "support": {
+        "source": "https://github.com/saippuakauppias/test-cart"
+    },
+    "authors": [
+        {
+            "name": "Denis Veselov",
+            "homepage": "https://github.com/saippuakauppias",
+            "role": "Main Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Saippuakauppias\\TestCart\\": "src"
+        }
+    }
+}
