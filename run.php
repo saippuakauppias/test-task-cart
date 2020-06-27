@@ -83,11 +83,11 @@ $rm->addRule(
 
 
 $cart = new Cart();
-$cart->addItem(new CartItem($pm->getProductByName('A')));
 $cart->addItem(new CartItem($pm->getProductByName('E')));
-$cart->addItem(new CartItem($pm->getProductByName('B')));
+$cart->addItem(new CartItem($pm->getProductByName('F')));
+$cart->addItem(new CartItem($pm->getProductByName('G')));
 $cart->addItem(new CartItem($pm->getProductByName('A')));
-$cart->addItem(new CartItem($pm->getProductByName('B')));
+$cart->addItem(new CartItem($pm->getProductByName('M')));
 
 $cart->applyRules($rm->getRules());
 

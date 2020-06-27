@@ -33,10 +33,10 @@ class Rule
         }
 
         $needProductsCopy = array_merge(array(), $this->needProducts);
-        for ($i = 0; $i < \sizeof($products); $i++) {
-            foreach ($needProductsCopy as $key => $val) {
-                if ($products[$i]->getName() == $needProductsCopy[$key]->getName()) {
-                    unset($needProductsCopy[$key]);
+        foreach ($products as $product) {
+            foreach ($needProductsCopy as $needProductKey => $needProductObj) {
+                if ($product->getName() == $needProductObj->getName()) {
+                    unset($needProductsCopy[$needProductKey]);
 
                     break;
                 }
