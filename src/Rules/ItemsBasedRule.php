@@ -4,14 +4,14 @@ namespace Saippuakauppias\TestCart\Rules;
 
 use Saippuakauppias\TestCart\Rules\AbstractRule;
 
-
 class ItemsBasedRule extends AbstractRule
 {
     protected $needProducts = [];
 
     protected $applyOnAll;
 
-    public function __construct(array $needProducts, float $discount, bool $applyOnAll = true) {
+    public function __construct(array $needProducts, float $discount, bool $applyOnAll = true)
+    {
         $this->needProducts = $needProducts;
         $this->discount = $discount;
         $this->applyOnAll = $applyOnAll;
@@ -19,11 +19,13 @@ class ItemsBasedRule extends AbstractRule
 
     // on all or on last
     // TODO: ApplyStrategy class?
-    public function needApplyOnAll(): bool {
+    public function needApplyOnAll(): bool
+    {
         return $this->applyOnAll;
     }
 
-    public function isApplicable(...$products): bool {
+    public function isApplicable(...$products): bool
+    {
         if (\sizeof($products) != \sizeof($this->needProducts)) {
             return false;
         }

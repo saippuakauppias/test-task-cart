@@ -4,10 +4,10 @@ namespace Saippuakauppias\TestCart\Rules;
 
 use Saippuakauppias\TestCart\Rules\AbstractRuleManager;
 
-
 class CountBasedRuleManager extends AbstractRuleManager
 {
-    public function __invoke(&$cartItems) {
+    public function __invoke(&$cartItems)
+    {
         foreach ($this->rules as $rule) {
             $relevantItems = [];
             foreach ($cartItems as $itemKey => $itemValue) {

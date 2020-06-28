@@ -4,11 +4,11 @@ namespace Saippuakauppias\TestCart\Rules;
 
 use Saippuakauppias\TestCart\Rules\AbstractRuleManager;
 
-
 class ItemsBasedRuleManager extends AbstractRuleManager
 {
-    public function __invoke(&$cartItems) {
-        for($i = 0; $i < \sizeof($cartItems); $i++) {
+    public function __invoke(&$cartItems)
+    {
+        for ($i = 0; $i < \sizeof($cartItems); $i++) {
             if ($cartItems[$i]->isTaken()) {
                 continue;
             }
@@ -19,7 +19,7 @@ class ItemsBasedRuleManager extends AbstractRuleManager
                 }
 
                 // 2 products
-                foreach($this->rules as $rule) {
+                foreach ($this->rules as $rule) {
                     if (
                         $rule->isApplicable(
                             $cartItems[$i]->getProduct(),
@@ -49,7 +49,7 @@ class ItemsBasedRuleManager extends AbstractRuleManager
 
                 // 3 products
                 for ($k = $j + 1; $k < \sizeof($cartItems); $k++) {
-                    foreach($this->rules as $rule) {
+                    foreach ($this->rules as $rule) {
                         if (
                             $rule->isApplicable(
                                 $cartItems[$i]->getProduct(),
