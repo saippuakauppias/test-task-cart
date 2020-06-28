@@ -8,11 +8,21 @@ class ProductManager
 {
     protected $products = [];
 
+    /**
+     * Add Product to manager
+     *
+     * @param Product $product
+     */
     public function addProduct(Product $product)
     {
         $this->products[$product->getName()] = $product;
     }
 
+    /**
+     * Get Product object by product name
+     *
+     * @param string $name
+     */
     public function getProductByName(string $name): Product
     {
         $this->checkProductNameExists($name);

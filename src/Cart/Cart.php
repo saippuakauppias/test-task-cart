@@ -9,6 +9,11 @@ class Cart
 {
     protected $items = [];
 
+    /**
+     * Add a new CartItem with Product in Cart
+     *
+     * @param CartItem $item
+     */
     public function addItem(CartItem $item)
     {
         $this->items[] = $item;
@@ -20,11 +25,19 @@ class Cart
         });
     }
 
+    /**
+     * Apply rules from manager to all applicable CartItems
+     *
+     * @param AbstractRuleManager $ruleManager
+     */
     public function applyRules(AbstractRuleManager $ruleManager)
     {
         $ruleManager($this->items);
     }
 
+    /**
+     * Get full price for all items in Cart
+     */
     public function getFullPrice(): float
     {
         $result = 0;
@@ -35,6 +48,9 @@ class Cart
         return round($result, 2);
     }
 
+    /**
+     * Get discount price for all items in Cart
+     */
     public function getDiscountPrice(): float
     {
         $result = 0;

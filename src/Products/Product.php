@@ -8,7 +8,13 @@ class Product
 
     protected $price;
 
-    public function __construct($name, $price)
+    /**
+     * Create a new Product
+     *
+     * @param string $name
+     * @param float $price
+     */
+    public function __construct(string $name, float $price)
     {
         $this->name = $name;
         $this->price = $price;

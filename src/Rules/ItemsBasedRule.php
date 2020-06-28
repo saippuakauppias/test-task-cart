@@ -10,6 +10,13 @@ class ItemsBasedRule extends AbstractRule
 
     protected $applyOnAll;
 
+    /**
+     * Create items based Rule
+     *
+     * @param array $needProducts
+     * @param float $discount
+     * @param bool $applyOnAll
+     */
     public function __construct(array $needProducts, float $discount, bool $applyOnAll = true)
     {
         $this->needProducts = $needProducts;
@@ -17,13 +24,19 @@ class ItemsBasedRule extends AbstractRule
         $this->applyOnAll = $applyOnAll;
     }
 
-    // on all or on last
-    // TODO: ApplyStrategy class?
+    /**
+     * Apply this rule to all cart items or only to last CartItem
+     *
+     * @return bool
+     */
     public function needApplyOnAll(): bool
     {
         return $this->applyOnAll;
     }
 
+    /**
+     * @inheritdoc
+     */
     public function isApplicable(...$products): bool
     {
         if (\sizeof($products) != \sizeof($this->needProducts)) {

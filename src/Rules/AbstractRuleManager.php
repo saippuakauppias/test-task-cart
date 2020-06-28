@@ -8,12 +8,22 @@ class AbstractRuleManager
 {
     protected $rules = [];
 
+    /**
+     * Add Rule to manager
+     *
+     * @param AbstractRule $rule
+     */
     public function addRule(AbstractRule $rule)
     {
         $this->rules[] = $rule;
     }
 
-    public function __invoke(&$cartItems)
+    /**
+     * Apply applicable rules to cart items
+     *
+     * @param array $cartItems
+     */
+    public function __invoke(array &$cartItems)
     {
         throw new \Exception('Not implemented');
     }

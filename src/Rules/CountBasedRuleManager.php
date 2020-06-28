@@ -6,6 +6,9 @@ use Saippuakauppias\TestTaskCart\Rules\AbstractRuleManager;
 
 class CountBasedRuleManager extends AbstractRuleManager
 {
+    /**
+     * @inheritdoc
+     */
     public function __invoke(&$cartItems)
     {
         foreach ($this->rules as $rule) {

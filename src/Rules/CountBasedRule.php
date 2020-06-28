@@ -11,6 +11,13 @@ class CountBasedRule extends AbstractRule
 
     protected $count;
 
+    /**
+     * Create count based Rule
+     *
+     * @param array $excludeProducts
+     * @param float $discount
+     * @param int $count
+     */
     public function __construct(array $excludeProducts, float $discount, int $count)
     {
         $this->excludeProducts = $excludeProducts;
