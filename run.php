@@ -6,6 +6,7 @@ use Saippuakauppias\TestTaskCart\Cart\{Cart, CartItem};
 use Saippuakauppias\TestTaskCart\Products\{Product, ProductManager};
 use Saippuakauppias\TestTaskCart\Rules\{ItemsBasedRuleManager, ItemsBasedRule, CountBasedRuleManager, CountBasedRule};
 
+// create Products
 $pm = new ProductManager();
 $pm->addProduct(new Product('A', 15.31));
 $pm->addProduct(new Product('B', 25.42));
@@ -22,6 +23,7 @@ $pm->addProduct(new Product('L', 76.87));
 $pm->addProduct(new Product('M', 3.01));
 
 
+// create Items based rules
 $itemsRM = new ItemsBasedRuleManager();
 $itemsRM->addRule(
     new ItemsBasedRule(
@@ -82,6 +84,7 @@ $itemsRM->addRule(
     )
 );
 
+// Create Count based rules
 $countRM = new CountBasedRuleManager();
 $countRM->addRule(
     new CountBasedRule(
@@ -114,6 +117,7 @@ $countRM->addRule(
     )
 );
 
+// add items to Cart
 $cart = new Cart();
 $cart->addItem(new CartItem($pm->getProductByName('E')));
 $cart->addItem(new CartItem($pm->getProductByName('F')));
@@ -124,6 +128,7 @@ $cart->addItem(new CartItem($pm->getProductByName('I')));
 $cart->addItem(new CartItem($pm->getProductByName('J')));
 $cart->addItem(new CartItem($pm->getProductByName('A')));
 
+// apply rules
 $cart->applyRules($itemsRM);
 $cart->applyRules($countRM);
 
