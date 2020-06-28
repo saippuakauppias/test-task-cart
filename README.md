@@ -1,5 +1,7 @@
 # Тестовое задание о продуктах в корзине
 
+![Lint Code Base](https://github.com/saippuakauppias/test-cart/workflows/Lint%20Code%20Base/badge.svg)
+
 ## Условия
 
 Есть продукты A, B, C, D, E, F, G, H, I, J, K, L, M. Каждый продукт стоит определенную сумму.
