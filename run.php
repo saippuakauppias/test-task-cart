@@ -7,19 +7,20 @@ use Saippuakauppias\TestCart\Products\{Product, ProductManager};
 use Saippuakauppias\TestCart\Rules\{ItemsBasedRuleManager, ItemsBasedRule, CountBasedRuleManager, CountBasedRule};
 
 $pm = new ProductManager();
-$pm->addProduct(new Product('A', 100));
-$pm->addProduct(new Product('B', 110));
-$pm->addProduct(new Product('C', 120));
-$pm->addProduct(new Product('D', 130));
-$pm->addProduct(new Product('E', 140));
-$pm->addProduct(new Product('F', 150));
-$pm->addProduct(new Product('G', 160));
-$pm->addProduct(new Product('H', 170));
-$pm->addProduct(new Product('I', 180));
-$pm->addProduct(new Product('J', 190));
-$pm->addProduct(new Product('K', 200));
-$pm->addProduct(new Product('L', 210));
-$pm->addProduct(new Product('M', 220));
+$pm->addProduct(new Product('A', 15.31));
+$pm->addProduct(new Product('B', 25.42));
+$pm->addProduct(new Product('C', 12.11));
+$pm->addProduct(new Product('D', 41.65));
+$pm->addProduct(new Product('E', 33.74));
+$pm->addProduct(new Product('F', 46.13));
+$pm->addProduct(new Product('G', 31.55));
+$pm->addProduct(new Product('H', 103.43));
+$pm->addProduct(new Product('I', 17.43));
+$pm->addProduct(new Product('J', 94.79));
+$pm->addProduct(new Product('K', 65.42));
+$pm->addProduct(new Product('L', 76.87));
+$pm->addProduct(new Product('M', 3.01));
+
 
 $itemsRM = new ItemsBasedRuleManager();
 $itemsRM->addRule(

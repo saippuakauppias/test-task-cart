@@ -23,5 +23,8 @@
         "psr-4": {
             "Saippuakauppias\\TestCart\\": "src"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.2.5"
     }
 }
