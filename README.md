@@ -2,13 +2,15 @@
 
 ![Lint Code Base](https://github.com/saippuakauppias/test-cart/workflows/Lint%20Code%20Base/badge.svg)
 
-## Установка
+## Установка и запуск
 
 ```bash
 git clone git@github.com:saippuakauppias/test-cart.git
 cd test-cart
 composer install --dev
 vendor/bin/phpunit tests/*.php
+
+php run.php
 ```
 
 ## Условия
