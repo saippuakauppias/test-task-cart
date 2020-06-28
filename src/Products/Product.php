@@ -1,7 +1,6 @@
 <?php
 declare(strict_types=1);
-
-namespace Saippuakauppias\TestCart;
+namespace Saippuakauppias\TestCart\Products;
 
 
 class Product

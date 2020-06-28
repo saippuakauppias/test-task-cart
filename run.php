@@ -2,7 +2,8 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Saippuakauppias\TestCart\{Product, ProductManager, Cart, CartItem};
+use Saippuakauppias\TestCart\Products\{Product, ProductManager};
+use Saippuakauppias\TestCart\Cart\{Cart, CartItem};
 use Saippuakauppias\TestCart\Rules\{ItemsBasedRuleManager, ItemsBasedRule};
 
 $pm = new ProductManager();

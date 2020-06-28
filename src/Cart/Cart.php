@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
-namespace Saippuakauppias\TestCart;
+namespace Saippuakauppias\TestCart\Cart;
 
-use Saippuakauppias\TestCart\CartItem;
+use Saippuakauppias\TestCart\Cart\CartItem;
 use Saippuakauppias\TestCart\Rules\AbstractRuleManager;
 
 
