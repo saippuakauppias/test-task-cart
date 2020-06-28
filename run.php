@@ -2,9 +2,9 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Saippuakauppias\TestCart\Products\{Product, ProductManager};
 use Saippuakauppias\TestCart\Cart\{Cart, CartItem};
-use Saippuakauppias\TestCart\Rules\{ItemsBasedRuleManager, ItemsBasedRule};
+use Saippuakauppias\TestCart\Products\{Product, ProductManager};
+use Saippuakauppias\TestCart\Rules\{ItemsBasedRuleManager, ItemsBasedRule, CountBasedRuleManager, CountBasedRule};
 
 $pm = new ProductManager();
 $pm->addProduct(new Product('A', 100));
@@ -21,8 +21,8 @@ $pm->addProduct(new Product('K', 200));
 $pm->addProduct(new Product('L', 210));
 $pm->addProduct(new Product('M', 220));
 
-$rm = new ItemsBasedRuleManager();
-$rm->addRule(
+$itemsRM = new ItemsBasedRuleManager();
+$itemsRM->addRule(
     new ItemsBasedRule(
         [
             $pm->getProductByName('A'),
@@ -31,7 +31,7 @@ $rm->addRule(
         0.1
     )
 );
-$rm->addRule(
+$itemsRM->addRule(
     new ItemsBasedRule(
         [
             $pm->getProductByName('D'),
@@ -40,7 +40,7 @@ $rm->addRule(
         0.06
     )
 );
-$rm->addRule(
+$itemsRM->addRule(
     new ItemsBasedRule(
         [
             $pm->getProductByName('E'),
@@ -50,7 +50,7 @@ $rm->addRule(
         0.3
     )
 );
-$rm->addRule(
+$itemsRM->addRule(
     new ItemsBasedRule(
         [
             $pm->getProductByName('A'),
@@ -60,7 +60,7 @@ $rm->addRule(
         false
     )
 );
-$rm->addRule(
+$itemsRM->addRule(
     new ItemsBasedRule(
         [
             $pm->getProductByName('A'),
@@ -70,7 +70,7 @@ $rm->addRule(
         false
     )
 );
-$rm->addRule(
+$itemsRM->addRule(
     new ItemsBasedRule(
         [
             $pm->getProductByName('A'),
@@ -81,21 +81,52 @@ $rm->addRule(
     )
 );
 
-
+$countRM = new CountBasedRuleManager();
+$countRM->addRule(
+    new CountBasedRule(
+        [
+            $pm->getProductByName('A'),
+            $pm->getProductByName('C'),
+        ],
+        0.2,
+        5
+    )
+);
+$countRM->addRule(
+    new CountBasedRule(
+        [
+            $pm->getProductByName('A'),
+            $pm->getProductByName('C'),
+        ],
+        0.1,
+        4
+    )
+);
+$countRM->addRule(
+    new CountBasedRule(
+        [
+            $pm->getProductByName('A'),
+            $pm->getProductByName('C'),
+        ],
+        0.05,
+        3
+    )
+);
 
 $cart = new Cart();
 $cart->addItem(new CartItem($pm->getProductByName('E')));
 $cart->addItem(new CartItem($pm->getProductByName('F')));
 $cart->addItem(new CartItem($pm->getProductByName('G')));
+$cart->addItem(new CartItem($pm->getProductByName('I')));
+$cart->addItem(new CartItem($pm->getProductByName('I')));
+$cart->addItem(new CartItem($pm->getProductByName('I')));
+$cart->addItem(new CartItem($pm->getProductByName('J')));
 $cart->addItem(new CartItem($pm->getProductByName('A')));
-$cart->addItem(new CartItem($pm->getProductByName('M')));
 
-$cart->applyRules($rm);
+$cart->applyRules($itemsRM);
+$cart->applyRules($countRM);
 
-
-$price_full = $cart->getFullPrice();
-$price_discount = $cart->getDiscountPrice();
-
+// result
 var_dump($cart);
-echo 'Full price: ' . $price_full . PHP_EOL;
-echo 'Discount price: ' . $price_discount . PHP_EOL;
+echo 'Full price: ' . $cart->getFullPrice() . PHP_EOL;
+echo 'Discount price: ' . $cart->getDiscountPrice() . PHP_EOL;
