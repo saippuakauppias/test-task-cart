@@ -48,8 +48,8 @@ vendor/bin/phpunit tests/*.php
 
 В тестовом скрипте выводится всё содержимое корзины, чтоб можно было посмотреть какое правило было применено к тому или иному товару в корзине.
 
-```
-➜ php run.php
+```bash
+$ php run.php
 
 object(Saippuakauppias\TestCart\Cart\Cart)#27 (1) {
   ["items":protected]=>
