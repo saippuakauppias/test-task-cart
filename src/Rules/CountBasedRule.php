@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
-namespace Saippuakauppias\TestCart\Rules;
+namespace Saippuakauppias\TestTaskCart\Rules;
 
-use Saippuakauppias\TestCart\Products\Product;
-use Saippuakauppias\TestCart\Rules\AbstractRule;
+use Saippuakauppias\TestTaskCart\Products\Product;
+use Saippuakauppias\TestTaskCart\Rules\AbstractRule;
 
 class CountBasedRule extends AbstractRule
 {

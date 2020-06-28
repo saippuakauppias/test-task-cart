@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
-namespace Saippuakauppias\TestCart\Products;
+namespace Saippuakauppias\TestTaskCart\Products;
 
-use Saippuakauppias\TestCart\Products\Product;
+use Saippuakauppias\TestTaskCart\Products\Product;
 
 class ProductManager
 {

@@ -1,13 +1,13 @@
 <?php
 use PHPUnit\Framework\TestCase;
-use Saippuakauppias\TestCart\Cart\Cart;
-use Saippuakauppias\TestCart\Cart\CartItem;
-use Saippuakauppias\TestCart\Products\Product;
-use Saippuakauppias\TestCart\Products\ProductManager;
-use Saippuakauppias\TestCart\Rules\ItemsBasedRuleManager;
-use Saippuakauppias\TestCart\Rules\ItemsBasedRule;
-use Saippuakauppias\TestCart\Rules\CountBasedRuleManager;
-use Saippuakauppias\TestCart\Rules\CountBasedRule;
+use Saippuakauppias\TestTaskCart\Cart\Cart;
+use Saippuakauppias\TestTaskCart\Cart\CartItem;
+use Saippuakauppias\TestTaskCart\Products\Product;
+use Saippuakauppias\TestTaskCart\Products\ProductManager;
+use Saippuakauppias\TestTaskCart\Rules\ItemsBasedRuleManager;
+use Saippuakauppias\TestTaskCart\Rules\ItemsBasedRule;
+use Saippuakauppias\TestTaskCart\Rules\CountBasedRuleManager;
+use Saippuakauppias\TestTaskCart\Rules\CountBasedRule;
 
 class CartTests extends TestCase
 {

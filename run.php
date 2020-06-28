@@ -2,9 +2,9 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Saippuakauppias\TestCart\Cart\{Cart, CartItem};
-use Saippuakauppias\TestCart\Products\{Product, ProductManager};
-use Saippuakauppias\TestCart\Rules\{ItemsBasedRuleManager, ItemsBasedRule, CountBasedRuleManager, CountBasedRule};
+use Saippuakauppias\TestTaskCart\Cart\{Cart, CartItem};
+use Saippuakauppias\TestTaskCart\Products\{Product, ProductManager};
+use Saippuakauppias\TestTaskCart\Rules\{ItemsBasedRuleManager, ItemsBasedRule, CountBasedRuleManager, CountBasedRule};
 
 $pm = new ProductManager();
 $pm->addProduct(new Product('A', 15.31));

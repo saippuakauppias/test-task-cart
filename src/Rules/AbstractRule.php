@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace Saippuakauppias\TestCart\Rules;
+namespace Saippuakauppias\TestTaskCart\Rules;
 
 class AbstractRule
 {

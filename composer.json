@@ -1,5 +1,5 @@
 {
-    "name": "saippuakauppias/test-cart",
+    "name": "saippuakauppias/test-task-cart",
     "description": "",
     "license": "MIT",
     "keywords": [
@@ -7,7 +7,7 @@
         "cart"
     ],
     "support": {
-        "source": "https://github.com/saippuakauppias/test-cart"
+        "source": "https://github.com/saippuakauppias/test-task-cart"
     },
     "authors": [
         {
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Saippuakauppias\\TestCart\\": "src"
+            "Saippuakauppias\\TestTaskCart\\": "src"
         }
     },
     "require-dev": {

@@ -1,12 +1,12 @@
 # Тестовое задание о продуктах в корзине
 
-![Lint Code Base](https://github.com/saippuakauppias/test-cart/workflows/Lint%20Code%20Base/badge.svg)
+![Lint Code Base](https://github.com/saippuakauppias/test-task-cart/workflows/Lint%20Code%20Base/badge.svg)
 
 ## Установка и запуск
 
 ```bash
-git clone git@github.com:saippuakauppias/test-cart.git
-cd test-cart
+git clone git@github.com:saippuakauppias/test-task-cart.git
+cd test-task-cart
 composer install --dev
 vendor/bin/phpunit tests/*.php
 
@@ -53,31 +53,31 @@ php run.php
 ```bash
 $ php run.php
 
-object(Saippuakauppias\TestCart\Cart\Cart)#27 (1) {
+object(Saippuakauppias\TestTaskCart\Cart\Cart)#27 (1) {
   ["items":protected]=>
   array(8) {
     [0]=>
-    object(Saippuakauppias\TestCart\Cart\CartItem)#34 (2) {
+    object(Saippuakauppias\TestTaskCart\Cart\CartItem)#34 (2) {
       ["product":protected]=>
-      object(Saippuakauppias\TestCart\Products\Product)#12 (2) {
+      object(Saippuakauppias\TestTaskCart\Products\Product)#12 (2) {
         ["name":protected]=>
         string(1) "J"
         ["price":protected]=>
         float(94.79)
       }
       ["rule":protected]=>
-      object(Saippuakauppias\TestCart\Rules\CountBasedRule)#25 (3) {
+      object(Saippuakauppias\TestTaskCart\Rules\CountBasedRule)#25 (3) {
         ["excludeProducts":protected]=>
         array(2) {
           [0]=>
-          object(Saippuakauppias\TestCart\Products\Product)#2 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#2 (2) {
             ["name":protected]=>
             string(1) "A"
             ["price":protected]=>
             float(15.31)
           }
           [1]=>
-          object(Saippuakauppias\TestCart\Products\Product)#5 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#5 (2) {
             ["name":protected]=>
             string(1) "C"
             ["price":protected]=>
@@ -91,34 +91,34 @@ object(Saippuakauppias\TestCart\Cart\Cart)#27 (1) {
       }
     }
     [1]=>
-    object(Saippuakauppias\TestCart\Cart\CartItem)#29 (2) {
+    object(Saippuakauppias\TestTaskCart\Cart\CartItem)#29 (2) {
       ["product":protected]=>
-      object(Saippuakauppias\TestCart\Products\Product)#8 (2) {
+      object(Saippuakauppias\TestTaskCart\Products\Product)#8 (2) {
         ["name":protected]=>
         string(1) "F"
         ["price":protected]=>
         float(46.13)
       }
       ["rule":protected]=>
-      object(Saippuakauppias\TestCart\Rules\ItemsBasedRule)#19 (3) {
+      object(Saippuakauppias\TestTaskCart\Rules\ItemsBasedRule)#19 (3) {
         ["needProducts":protected]=>
         array(3) {
           [0]=>
-          object(Saippuakauppias\TestCart\Products\Product)#7 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#7 (2) {
             ["name":protected]=>
             string(1) "E"
             ["price":protected]=>
             float(33.74)
           }
           [1]=>
-          object(Saippuakauppias\TestCart\Products\Product)#8 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#8 (2) {
             ["name":protected]=>
             string(1) "F"
             ["price":protected]=>
             float(46.13)
           }
           [2]=>
-          object(Saippuakauppias\TestCart\Products\Product)#9 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#9 (2) {
             ["name":protected]=>
             string(1) "G"
             ["price":protected]=>
@@ -132,34 +132,34 @@ object(Saippuakauppias\TestCart\Cart\Cart)#27 (1) {
       }
     }
     [2]=>
-    object(Saippuakauppias\TestCart\Cart\CartItem)#28 (2) {
+    object(Saippuakauppias\TestTaskCart\Cart\CartItem)#28 (2) {
       ["product":protected]=>
-      object(Saippuakauppias\TestCart\Products\Product)#7 (2) {
+      object(Saippuakauppias\TestTaskCart\Products\Product)#7 (2) {
         ["name":protected]=>
         string(1) "E"
         ["price":protected]=>
         float(33.74)
       }
       ["rule":protected]=>
-      object(Saippuakauppias\TestCart\Rules\ItemsBasedRule)#19 (3) {
+      object(Saippuakauppias\TestTaskCart\Rules\ItemsBasedRule)#19 (3) {
         ["needProducts":protected]=>
         array(3) {
           [0]=>
-          object(Saippuakauppias\TestCart\Products\Product)#7 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#7 (2) {
             ["name":protected]=>
             string(1) "E"
             ["price":protected]=>
             float(33.74)
           }
           [1]=>
-          object(Saippuakauppias\TestCart\Products\Product)#8 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#8 (2) {
             ["name":protected]=>
             string(1) "F"
             ["price":protected]=>
             float(46.13)
           }
           [2]=>
-          object(Saippuakauppias\TestCart\Products\Product)#9 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#9 (2) {
             ["name":protected]=>
             string(1) "G"
             ["price":protected]=>
@@ -173,34 +173,34 @@ object(Saippuakauppias\TestCart\Cart\Cart)#27 (1) {
       }
     }
     [3]=>
-    object(Saippuakauppias\TestCart\Cart\CartItem)#30 (2) {
+    object(Saippuakauppias\TestTaskCart\Cart\CartItem)#30 (2) {
       ["product":protected]=>
-      object(Saippuakauppias\TestCart\Products\Product)#9 (2) {
+      object(Saippuakauppias\TestTaskCart\Products\Product)#9 (2) {
         ["name":protected]=>
         string(1) "G"
         ["price":protected]=>
         float(31.55)
       }
       ["rule":protected]=>
-      object(Saippuakauppias\TestCart\Rules\ItemsBasedRule)#19 (3) {
+      object(Saippuakauppias\TestTaskCart\Rules\ItemsBasedRule)#19 (3) {
         ["needProducts":protected]=>
         array(3) {
           [0]=>
-          object(Saippuakauppias\TestCart\Products\Product)#7 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#7 (2) {
             ["name":protected]=>
             string(1) "E"
             ["price":protected]=>
             float(33.74)
           }
           [1]=>
-          object(Saippuakauppias\TestCart\Products\Product)#8 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#8 (2) {
             ["name":protected]=>
             string(1) "F"
             ["price":protected]=>
             float(46.13)
           }
           [2]=>
-          object(Saippuakauppias\TestCart\Products\Product)#9 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#9 (2) {
             ["name":protected]=>
             string(1) "G"
             ["price":protected]=>
@@ -214,27 +214,27 @@ object(Saippuakauppias\TestCart\Cart\Cart)#27 (1) {
       }
     }
     [4]=>
-    object(Saippuakauppias\TestCart\Cart\CartItem)#31 (2) {
+    object(Saippuakauppias\TestTaskCart\Cart\CartItem)#31 (2) {
       ["product":protected]=>
-      object(Saippuakauppias\TestCart\Products\Product)#11 (2) {
+      object(Saippuakauppias\TestTaskCart\Products\Product)#11 (2) {
         ["name":protected]=>
         string(1) "I"
         ["price":protected]=>
         float(17.43)
       }
       ["rule":protected]=>
-      object(Saippuakauppias\TestCart\Rules\CountBasedRule)#25 (3) {
+      object(Saippuakauppias\TestTaskCart\Rules\CountBasedRule)#25 (3) {
         ["excludeProducts":protected]=>
         array(2) {
           [0]=>
-          object(Saippuakauppias\TestCart\Products\Product)#2 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#2 (2) {
             ["name":protected]=>
             string(1) "A"
             ["price":protected]=>
             float(15.31)
           }
           [1]=>
-          object(Saippuakauppias\TestCart\Products\Product)#5 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#5 (2) {
             ["name":protected]=>
             string(1) "C"
             ["price":protected]=>
@@ -248,27 +248,27 @@ object(Saippuakauppias\TestCart\Cart\Cart)#27 (1) {
       }
     }
     [5]=>
-    object(Saippuakauppias\TestCart\Cart\CartItem)#32 (2) {
+    object(Saippuakauppias\TestTaskCart\Cart\CartItem)#32 (2) {
       ["product":protected]=>
-      object(Saippuakauppias\TestCart\Products\Product)#11 (2) {
+      object(Saippuakauppias\TestTaskCart\Products\Product)#11 (2) {
         ["name":protected]=>
         string(1) "I"
         ["price":protected]=>
         float(17.43)
       }
       ["rule":protected]=>
-      object(Saippuakauppias\TestCart\Rules\CountBasedRule)#25 (3) {
+      object(Saippuakauppias\TestTaskCart\Rules\CountBasedRule)#25 (3) {
         ["excludeProducts":protected]=>
         array(2) {
           [0]=>
-          object(Saippuakauppias\TestCart\Products\Product)#2 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#2 (2) {
             ["name":protected]=>
             string(1) "A"
             ["price":protected]=>
             float(15.31)
           }
           [1]=>
-          object(Saippuakauppias\TestCart\Products\Product)#5 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#5 (2) {
             ["name":protected]=>
             string(1) "C"
             ["price":protected]=>
@@ -282,27 +282,27 @@ object(Saippuakauppias\TestCart\Cart\Cart)#27 (1) {
       }
     }
     [6]=>
-    object(Saippuakauppias\TestCart\Cart\CartItem)#33 (2) {
+    object(Saippuakauppias\TestTaskCart\Cart\CartItem)#33 (2) {
       ["product":protected]=>
-      object(Saippuakauppias\TestCart\Products\Product)#11 (2) {
+      object(Saippuakauppias\TestTaskCart\Products\Product)#11 (2) {
         ["name":protected]=>
         string(1) "I"
         ["price":protected]=>
         float(17.43)
       }
       ["rule":protected]=>
-      object(Saippuakauppias\TestCart\Rules\CountBasedRule)#25 (3) {
+      object(Saippuakauppias\TestTaskCart\Rules\CountBasedRule)#25 (3) {
         ["excludeProducts":protected]=>
         array(2) {
           [0]=>
-          object(Saippuakauppias\TestCart\Products\Product)#2 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#2 (2) {
             ["name":protected]=>
             string(1) "A"
             ["price":protected]=>
             float(15.31)
           }
           [1]=>
-          object(Saippuakauppias\TestCart\Products\Product)#5 (2) {
+          object(Saippuakauppias\TestTaskCart\Products\Product)#5 (2) {
             ["name":protected]=>
             string(1) "C"
             ["price":protected]=>
@@ -316,9 +316,9 @@ object(Saippuakauppias\TestCart\Cart\Cart)#27 (1) {
       }
     }
     [7]=>
-    object(Saippuakauppias\TestCart\Cart\CartItem)#35 (2) {
+    object(Saippuakauppias\TestTaskCart\Cart\CartItem)#35 (2) {
       ["product":protected]=>
-      object(Saippuakauppias\TestCart\Products\Product)#2 (2) {
+      object(Saippuakauppias\TestTaskCart\Products\Product)#2 (2) {
         ["name":protected]=>
         string(1) "A"
         ["price":protected]=>

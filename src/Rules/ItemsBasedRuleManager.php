@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
-namespace Saippuakauppias\TestCart\Rules;
+namespace Saippuakauppias\TestTaskCart\Rules;
 
-use Saippuakauppias\TestCart\Rules\AbstractRuleManager;
+use Saippuakauppias\TestTaskCart\Rules\AbstractRuleManager;
 
 class ItemsBasedRuleManager extends AbstractRuleManager
 {

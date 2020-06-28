@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
-namespace Saippuakauppias\TestCart\Cart;
+namespace Saippuakauppias\TestTaskCart\Cart;
 
-use Saippuakauppias\TestCart\Cart\CartItem;
-use Saippuakauppias\TestCart\Rules\AbstractRuleManager;
+use Saippuakauppias\TestTaskCart\Cart\CartItem;
+use Saippuakauppias\TestTaskCart\Rules\AbstractRuleManager;
 
 class Cart
 {
