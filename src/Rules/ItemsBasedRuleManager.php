@@ -62,7 +62,7 @@ class ItemsBasedRuleManager extends AbstractRuleManager
                             $cartItems[$j]->applyRule($rule);
                             $cartItems[$k]->applyRule($rule);
 
-                            break 2; // sic!
+                            break 3; // sic!
                         }
                     }
                 }
