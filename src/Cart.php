@@ -3,6 +3,7 @@ declare(strict_types=1);
 namespace Saippuakauppias\TestCart;
 
 use Saippuakauppias\TestCart\CartItem;
+use Saippuakauppias\TestCart\Rules\AbstractRuleManager;
 
 
 class Cart
@@ -19,8 +20,8 @@ class Cart
         });
     }
 
-    public function applyRules(Callable $checker) {
-        $checker($this->items);
+    public function applyRules(AbstractRuleManager $ruleManager) {
+        $ruleManager($this->items);
     }
 
     public function getFullPrice(): float {
@@ -29,7 +30,7 @@ class Cart
             $result += $item->getProductPrice();
         }
 
-        return $result;
+        return round($result, 2);
     }
 
     public function getDiscountPrice(): float {
@@ -41,6 +42,6 @@ class Cart
             $result += $price * (1 - $discount);
         }
 
-        return $result;
+        return round($result, 2);
     }
 }

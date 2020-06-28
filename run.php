@@ -2,8 +2,8 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Saippuakauppias\TestCart\{Product, ProductManager, Cart, CartItem, Rule, RuleManager};
-
+use Saippuakauppias\TestCart\{Product, ProductManager, Cart, CartItem};
+use Saippuakauppias\TestCart\Rules\{ItemsBasedRuleManager, ItemsBasedRule};
 
 $pm = new ProductManager();
 $pm->addProduct(new Product('A', 100));
@@ -20,9 +20,9 @@ $pm->addProduct(new Product('K', 200));
 $pm->addProduct(new Product('L', 210));
 $pm->addProduct(new Product('M', 220));
 
-$rm = new RuleManager();
+$rm = new ItemsBasedRuleManager();
 $rm->addRule(
-    new Rule(
+    new ItemsBasedRule(
         [
             $pm->getProductByName('A'),
             $pm->getProductByName('B'),
@@ -31,7 +31,7 @@ $rm->addRule(
     )
 );
 $rm->addRule(
-    new Rule(
+    new ItemsBasedRule(
         [
             $pm->getProductByName('D'),
             $pm->getProductByName('E'),
@@ -40,7 +40,7 @@ $rm->addRule(
     )
 );
 $rm->addRule(
-    new Rule(
+    new ItemsBasedRule(
         [
             $pm->getProductByName('E'),
             $pm->getProductByName('F'),
@@ -50,7 +50,7 @@ $rm->addRule(
     )
 );
 $rm->addRule(
-    new Rule(
+    new ItemsBasedRule(
         [
             $pm->getProductByName('A'),
             $pm->getProductByName('K'),
@@ -60,7 +60,7 @@ $rm->addRule(
     )
 );
 $rm->addRule(
-    new Rule(
+    new ItemsBasedRule(
         [
             $pm->getProductByName('A'),
             $pm->getProductByName('L'),
@@ -70,7 +70,7 @@ $rm->addRule(
     )
 );
 $rm->addRule(
-    new Rule(
+    new ItemsBasedRule(
         [
             $pm->getProductByName('A'),
             $pm->getProductByName('M'),

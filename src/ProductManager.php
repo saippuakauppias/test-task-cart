@@ -13,12 +13,6 @@ class ProductManager
         $this->products[$product->getName()] = $product;
     }
 
-    public function getPriceByName(string $name): float {
-        $this->checkProductNameExists($name);
-
-        return $this->products[$name]->getPrice();
-    }
-
     public function getProductByName(string $name): Product {
         $this->checkProductNameExists($name);
 

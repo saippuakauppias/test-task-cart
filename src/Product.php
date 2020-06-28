@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Saippuakauppias\TestCart;
 
 
-class Product implements ProductInterface
+class Product
 {
     protected $name;
 

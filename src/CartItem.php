@@ -2,7 +2,8 @@
 declare(strict_types=1);
 namespace Saippuakauppias\TestCart;
 
-use Saippuakauppias\TestCart\{Product, Rule};
+use Saippuakauppias\TestCart\Product;
+use Saippuakauppias\TestCart\Rules\AbstractRule;
 
 
 class CartItem
@@ -22,7 +23,8 @@ class CartItem
     public function isTaken(): bool {
         return !\is_null($this->rule);
     }
-    public function applyRule(Rule $rule) {
+
+    public function applyRule(AbstractRule $rule) {
         $this->rule = $rule;
     }
 

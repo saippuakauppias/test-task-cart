@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
-namespace Saippuakauppias\TestCart;
+namespace Saippuakauppias\TestCart\Rules;
+
+use Saippuakauppias\TestCart\Rules\AbstractRule;
 
 
-class Rule
+class ItemsBasedRule extends AbstractRule
 {
-    protected $discount = 0.0;
-
     protected $needProducts = [];
 
     protected $applyOnAll;
@@ -17,17 +17,13 @@ class Rule
         $this->applyOnAll = $applyOnAll;
     }
 
-    public function getDiscount(): float {
-        return $this->discount;
-    }
-
     // on all or on last
     // TODO: ApplyStrategy class?
     public function needApplyOnAll(): bool {
         return $this->applyOnAll;
     }
 
-    public function isApplicable(...$products) {
+    public function isApplicable(...$products): bool {
         if (\sizeof($products) != \sizeof($this->needProducts)) {
             return false;
         }

@@ -1,18 +1,12 @@
 <?php
 declare(strict_types=1);
-namespace Saippuakauppias\TestCart;
+namespace Saippuakauppias\TestCart\Rules;
 
-use Saippuakauppias\TestCart\Rule;
+use Saippuakauppias\TestCart\Rules\AbstractRuleManager;
 
 
-class RuleManager
+class ItemsBasedRuleManager extends AbstractRuleManager
 {
-    protected $rules = [];
-
-    public function addRule(Rule $rule) {
-        $this->rules[] = $rule;
-    }
-
     public function __invoke(&$cartItems) {
         for($i = 0; $i < \sizeof($cartItems); $i++) {
             if ($cartItems[$i]->isTaken()) {
