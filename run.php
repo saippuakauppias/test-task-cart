@@ -89,12 +89,12 @@ $cart->addItem(new CartItem($pm->getProductByName('G')));
 $cart->addItem(new CartItem($pm->getProductByName('A')));
 $cart->addItem(new CartItem($pm->getProductByName('M')));
 
-$cart->applyRules($rm->getRules());
+$cart->applyRules($rm);
 
 
 $price_full = $cart->getFullPrice();
 $price_discount = $cart->getDiscountPrice();
 
 var_dump($cart);
-var_dump($price_full);
-var_dump($price_discount);
+echo 'Full price: ' . $price_full . PHP_EOL;
+echo 'Discount price: ' . $price_discount . PHP_EOL;
